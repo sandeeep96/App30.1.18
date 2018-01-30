@@ -1,0 +1,168 @@
+<div id="main">
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+    <div class="panel panel-default">
+    <div class="panel-heading"><h1>Indian Olympic Medal Winners</h1></div>
+    <div class="panel-body">
+
+            <div *ngFor="let winner of winners" class="col-sm-6 col-xs-12 col-lg-3 col-md-3 ">
+                    <div class="thumbnail single">
+                        <img [src]="winner.image">
+                        <div class="clearfix"></div>
+                        <div class="caption">
+                       <b><a (click)="gotoDetail(winner)">{{winner.name | uppercase }}</a></b> <br />
+                        <span><b>Event: </b>{{winner.event}}</span><br />
+                        <span><b>Medal: </b>{{winner.medal}}</span><br />
+                        <span><b>Venue: </b>{{winner.venue}}</span><br />
+                        <span><b>Year: </b>{{winner.year}}</span><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+   <!-- <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/15.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner P V Sindhu">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>P V Sindhu</b><br />
+    <span><b>Event: </b>Badminton</span><br />
+    <span><b>Medal: </b>Silver</span><br />
+    <span><b>Venue: </b>Rio di Jeniro</span><br />
+    <span><b>Year: </b>2016</span><br />
+    </div>
+    </div>
+    </div>
+     <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/14.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Shakshi Malik">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Shakshi Malik</b><br />
+    <span><b>Event: </b>Wrestling</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+    <span><b>Venue: </b>Rio di Jeniro</span><br />
+    <span><b>Year: </b>2016</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/13.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Yogeshwar Dutt">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Yogeshwar Dutt</b><br />
+    <span><b>Event: </b>Wrestling</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+    <span><b>Venue: </b>London</span><br />
+    <span><b>Year: </b>2012</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/12.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Gagan Narang">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Gagan Narang</b><br />
+    <span><b>Event: </b>Shooting</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+    <span><b>Venue: </b>London</span><br />
+    <span><b>Year: </b>2012</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/11.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Saina Nehwal">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Saina Nehwal</b><br />
+    <span><b>Event: </b>Badminton</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+    <span><b>Venue: </b>London</span><br />
+    <span><b>Year: </b>2012</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/10.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Mery Kom">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Mery Kom</b><br />
+    <span><b>Event: </b>Boxing</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+     <span><b>Venue: </b>London</span><br />
+    <span><b>Year: </b>2012</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/9.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Shushil Kumar">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Shushil Kumar</b><br />
+    <span><b>Event: </b>Wrestling</span><br />
+    <span><b>Medal: </b>Silver</span><br />
+    <span><b>Venue: </b>London</span><br />
+    <span><b>Year: </b>2012</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/8.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Vijay Kumar">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Vijay Kumar</b><br />
+    <span><b>Event: </b>Shooting </span><br />
+    <span><b>Medal: </b>Silver</span><br />
+    <span><b>Venue: </b>London</span><br />
+    <span><b>Year: </b>2012</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/7.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Vijendra Kumar">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Vijendra Kumar</b><br />
+    <span><b>Event: </b>Boxing</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+    <span><b>Venue: </b>Beijing</span><br />
+    <span><b>Year: </b>2008</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/6.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Sushil Kumar">
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Sushil Kumar</b><br />
+    <span><b>Event: </b>Wrestling</span><br />
+    <span><b>Medal: </b>Bronze</span><br />
+    <span><b>Venue: </b>Beijing</span><br />
+    <span><b>Year: </b>2008</span><br />
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-3">
+    <div class="thumbnail">
+    <img src="https://www.onlinegk.com/images/indian-olympic-medal-winner/5.jpg" border='0' align='left' width="100%" alt="Indian Onlypic Winner Abhinav Bindra"> 
+    <div class="clearfix"></div>
+    <div class="caption">
+    <b>Abhinav Bindra</b><br />
+    <span><b>Event: </b>Shooting</span><br />
+    <span><b>Medal: </b>Gold</span><br />
+    <span><b>Venue: </b>Beijing</span><br />
+    <span><b>Year: </b>2008</span><br />
+    </div>
+    </div>
+    </div> -->

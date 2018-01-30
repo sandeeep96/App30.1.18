@@ -1,0 +1,13 @@
+.right_div {
+    float: left;
+    margin: left;
+     width: 50%;
+   /* min-height: 200px; */
+    /* border: 1px solid; */
+    padding: 20px 30px;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+}

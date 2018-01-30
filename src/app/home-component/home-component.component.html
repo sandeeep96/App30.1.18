@@ -1,0 +1,38 @@
+<br>
+
+<div class="center">
+    You are authenticated....Welcome <strong>{{name}}</strong> !!!
+    <br>
+    <nav>
+        <ul>
+          <li>
+            <div class="dropdown">
+          <a class="dropbtn" routerLink="dashboard">Dashboard</a>
+          <div class="dropdown-content">
+      <a routerLink="create">Create Record</a>
+      
+    </div>
+    </div>
+  </li>
+          <li><a routerLink="details">Details</a></li>
+          <form class="navbar-form navbar-left">
+            <div class="input-group">
+              <input #searchBox type="text" [(ngModel)]="random" name="random1" class="form-control" placeholder="Search"  id="search-box" (keyup)="search(searchBox.value)">
+              
+              <div>
+                <div *ngFor="let hero of winners | async"
+                     (click)="gotoDetail(hero)" class="search-result" >
+                  {{hero.name}}
+                </div>
+              </div>
+            </div>
+            </form>
+         
+          <li class="navbar-form  navbar-right" ><a style=" cursor: pointer" (click)="LogOut()">LogOut</a></li>
+        </ul>
+  </nav>
+
+<router-outlet></router-outlet>
+</div>
+
+

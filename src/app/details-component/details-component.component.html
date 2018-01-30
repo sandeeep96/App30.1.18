@@ -1,0 +1,18 @@
+<h2>Country Details Participated in Olympics</h2>
+
+<h5>select the Country here:</h5> 
+<select [(ngModel)]="countryName" (click)="getCountryInfo()">
+  <option value=""> select </option>
+  <option *ngFor="let country of countriesList" value="{{country.name}}"> {{country.name}} </option>
+  </select>
+
+<div *ngIf="countryName">
+  <h4><u>Name:</u>&#160;&#160;{{countryObj.name}}</h4>
+  <h4><u>Capital: </u>&#160;&#160;{{countryObj.capital}}</h4>
+  <h4><u>Region:</u>&#160;&#160; {{countryObj.region}}</h4>
+  <h4><u>Sub-Region:</u>&#160;&#160; {{countryObj.subregion}}</h4>
+  <h4><u>Population:</u>&#160;&#160; {{countryObj.population}}</h4>
+  <h4><u>Time-Zone:</u>&#160;&#160; {{countryObj.timezones[0]}}</h4>
+  <h4><u>Flag:</u>&#160;&#160;&#160;<span> <img src="{{countryObj.flag}}" alt="no Image of Flag" width="150" height="100"></span></h4>
+ 
+</div>

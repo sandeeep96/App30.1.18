@@ -1,0 +1,130 @@
+
+<div class="right_div" >
+  <h2>Create {{winnerWOid.name}} Details Here!</h2> 
+  <br><br>
+  <!-- <b>Name: </b> <input [(ngModel)]="winnerWOid.name" name="name"/>
+  <br><br>
+  <b>Event: </b> <input [(ngModel)]="winnerWOid.event" name="name"/>
+  <br><br>
+  <b>Medal: </b> <input [(ngModel)]="winnerWOid.medal" name="name"/>
+  <br><br>
+  <b>Venue: </b> <input [(ngModel)]="winnerWOid.venue" name="name"/>
+  <br><br>
+  <b>Year: </b> <input [(ngModel)]="winnerWOid.year" name="name"/>
+  <br><br>
+  <b>Image-1(Url): </b> <input [(ngModel)]="winnerWOid.image" name="name"/>
+  <br><br>
+  <b>Image-2(Url): </b> <input [(ngModel)]="winnerWOid.image1" name="name"/>
+  <br><br>
+  <b>About: </b> <input [(ngModel)]="winnerWOid.description" name="name"/>
+  <br><br>
+  
+  <br> -->
+  <!-- <form [formGroup]="forms" (ngSubmit)="createDetail(forms.value)">
+  <table>
+    <tr>
+      <td><label>Name:</label></td>
+      <td><input [(ngModel)]="winnerWOid.name" formControlName="Name"/></td>
+    </tr>
+    <tr>
+      <td><label>Event:</label></td>
+      <td><input [(ngModel)]="winnerWOid.event" formControlName="Event" /></td>
+    </tr>
+    <tr>
+      <td><label>Medal:</label></td>
+      <td><input [(ngModel)]="winnerWOid.medal" formControlName="Medal"/></td>
+    </tr>
+    <tr>
+      <td><label>Venue:</label></td>
+      <td><input [(ngModel)]="winnerWOid.venue" formControlName="Venue"/></td>
+    </tr>
+    <tr>
+      <td><label>Year: </label></td>
+      <td><input [(ngModel)]="winnerWOid.year" formControlName="Year"/></td>
+    </tr>
+    <tr>
+      <td><label>Image-1(Url):</label></td>
+      <td><textarea [(ngModel)]="winnerWOid.image" rows="1" cols="50" formControlName="Image1">
+      </textarea></td>
+    </tr>
+    <tr>
+      <td><label>Image-2(Url):</label></td>
+      <td><textarea [(ngModel)]="winnerWOid.image1" rows="1" cols="50" formControlName="Image2">
+      </textarea></td>
+    </tr>
+    <tr>
+      <td><label>About:</label></td>
+      <td><textarea [(ngModel)]="winnerWOid.description" rows="6" cols="50" formControlName="About">
+        </textarea></td>
+    </tr>
+  </table>
+
+  <table align="center">
+    
+        <tr>
+          <td><button type="submit" >create</button></td>
+          <td><button (click)="goBack()">Back</button></td>
+        </tr>
+      </table>
+    </form>
+</div> -->
+
+
+<form [formGroup]="forms" (ngSubmit)="createDetail(forms.value)">
+  <table>
+    <tr>
+      <td><label>Name:</label></td>
+      <td><input  formControlName="Name"/></td>
+    </tr>
+    <!-- <tr>
+        <td><label>Date Of Birth:</label></td>
+        <td><p-calendar [(ngModel)]="value"></p-calendar></td>
+      </tr> -->
+      <tr>
+          <td><label>Date Of Birth:</label></td>
+          <td><p-calendar formControlName="Date"></p-calendar></td>
+        </tr>
+    <tr>
+      <td><label>Event:</label></td>
+      <td><input  formControlName="Event" /></td>
+    </tr>
+    <tr>
+      <td><label>Medal:</label></td>
+      <td><input  formControlName="Medal"/></td>
+    </tr>
+    <tr>
+      <td><label>Venue:</label></td>
+      <td><input  formControlName="Venue"/></td>
+    </tr>
+    <tr>
+      <td><label>Year: </label></td>
+      <td><input  formControlName="Year"/></td>
+    </tr>
+    <tr>
+      <td><label>Image-1(Url):</label></td>
+      <td><textarea  rows="1" cols="50" formControlName="Image1">
+      </textarea></td>
+    </tr>
+    <tr>
+      <td><label>Image-2(Url):</label></td>
+      <td><textarea  rows="1" cols="50" formControlName="Image2">
+      </textarea></td>
+    </tr>
+    <tr>
+      <td><label>About:</label></td>
+      <td><textarea  rows="6" cols="50" formControlName="About">
+        </textarea></td>
+    </tr>
+  </table>
+
+  <table align="center">
+    
+        <tr>
+            <td><button class="btn btn-primary" (click)="goBack()">Back</button></td>
+          <td><button class="btn btn-success" type="submit" [disabled]="!forms.valid">create</button></td>
+          
+          <!-- <button pButton type="button" class="ui-button-info">HI</button> -->
+        </tr>
+      </table>
+    </form>
+</div>

@@ -1,0 +1,94 @@
+<div class="left_div">
+  <h1>{{winner.name}} Details!</h1>  
+
+
+    <img [src]="winner.image1" width="80%" height="50%">
+    <br>
+    <br>
+   <span><b>Name: </b>{{winner.name}}</span><br />
+    <span><b>Event: </b>{{winner.event}}</span><br />
+    <span><b>Medal: </b>{{winner.medal}}</span><br />
+    <span><b>Venue: </b>{{winner.venue}}</span><br />
+    <span><b>Year: </b>{{winner.year}}</span><br />
+    <span><b>About: </b>{{winner.description}}</span><br />
+    <br>
+    
+    <table align="center">
+      
+          <tr>
+            <td><button class="btn btn-primary" (click)="goBack()">Back</button></td>
+            <td><button class="btn btn-warning" (click)="editDetail()">Edit Details</button></td>
+            <td><button class="btn btn-danger" (click)="deleteDetail()">Delete Details</button></td>
+          </tr>
+        </table>
+
+
+</div>
+<div class="right_div" *ngIf="loggedIn">
+  <h2>Edit {{winner.name}} Details Here!</h2> 
+  <br><br>
+  <!-- <b>Name: </b> <input [(ngModel)]="winner.name" placeholder="name" />
+  <br><br>
+  <b>Event: </b> <input [(ngModel)]="winner.event" placeholder="name" />
+  <br><br>
+  <b>Medal: </b> <input [(ngModel)]="winner.medal" placeholder="name" />
+  <br><br>
+  <b>Venue: </b> <input [(ngModel)]="winner.venue" placeholder="name" />
+  <br><br>
+  <b>Year: </b> <input [(ngModel)]="winner.year" placeholder="name" />
+  <br><br>
+  <b>Image-1(Url): </b> <input [(ngModel)]="winner.image" placeholder="name" />
+  <br><br>
+  <b>Image-2(Url): </b> <input [(ngModel)]="winner.image1" placeholder="name" />
+  <br><br>
+  <b>About: </b> <input [(ngModel)]="winner.description" placeholder="name" />
+  <br><br>
+  
+  <br> -->
+  <table>
+    <tr>
+      <td><label>Name:</label></td>
+      <td><input [(ngModel)]="winner.name" placeholder="name" /></td>
+    </tr>
+    <tr>
+      <td><label>Event:</label></td>
+      <td><input [(ngModel)]="winner.event" placeholder="name" /></td>
+    </tr>
+    
+    <tr>
+        
+      <td><label>Medal:</label></td>
+      <td><input [(ngModel)]="winner.medal" placeholder="name" /></td>
+    </tr>
+    <tr>
+      <td><label>Venue:</label></td>
+      <td><input [(ngModel)]="winner.venue" placeholder="name" /></td>
+    </tr>
+    <tr>
+      <td><label>Year: </label></td>
+      <td><input [(ngModel)]="winner.year" placeholder="name" /></td>
+    </tr>
+    <tr>
+      <td><label>Image-1(Url):</label></td>
+      <td><textarea [(ngModel)]="winner.image" rows="1" cols="50">
+      </textarea></td>
+    </tr>
+    <tr>
+      <td><label>Image-2(Url):</label></td>
+      <td><textarea [(ngModel)]="winner.image1" rows="1" cols="50">
+      </textarea></td>
+    </tr>
+    <tr>
+      <td><label>About:</label></td>
+      <td><textarea [(ngModel)]="winner.description" rows="6" cols="50">
+        </textarea></td>
+    </tr>
+  </table>
+  <table align="center">
+    
+        <tr>
+          <td><button class="btn btn-primary" (click)="exitEditDetail()">Exit Editing</button></td>
+          <td><button class="btn btn-success" (click)="saveDetail()">Save</button></td>
+        </tr>
+      </table>
+</div>

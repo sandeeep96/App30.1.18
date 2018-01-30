@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Payroll Managment System </title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ // <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+  .sidebarleft
+						{ float: left;
+						  width: 170px;
+						  margin:0 0 0 0;
+						  padding: 10px 0 20px 0;
+						background: transparent url(transparent.png) repeat;}
+
+						#menubarleft
+						{ width: 160px;
+						  
+						  padding: 0;
+						  background: transparent url(transparent.png) repeat;} 
+
+						#contentleft
+						{ text-align: left;
+						  float: left;
+						  width: 680px;
+						  padding: 10px 10px 10px 20px;;}
+
+						#insidecontentleft
+						{ text-align: left;
+						  float: left;
+						  width: 600px;
+							margin: 0 auto 0 auto;						 
+							padding: 10px 10px 10px 20px;
+							overflow: hidden;
+							}
+
+						#insidecontentleft table
+						{ width:80%; margin: 10px 0 30px 0;}
+
+						/* #insidecontentleft table tr th, table tr td
+						{ ; 
+						  padding: 7px 4px;
+						  text-align: left;} */
+
+						#contentleft ul
+						{ margin: 2px 0 22px 0px;}
+
+						#contentleft ul li
+						{ list-style-type: none;
+						  background: url(bullet.png) no-repeat;
+						  margin: 0 0 6px 0; 
+						  padding: 0 0 4px 25px;
+						  line-height: 1.5em;}
+						#site_contentleft
+						{ width: 888px;
+						  overflow: hidden;
+						  margin: 0 auto 0 auto;
+						  padding: 0 10px 20px 0px;
+						  background: transparent url(transparent_light.png) repeat;} 
+
+						ul#menuleft, ul#menuleft li
+						{ float: left;
+						  margin: 0; 
+						
+						  padding: 0;}
+
+						ul#menuleft li
+						{ 
+						list-style: none;}
+
+						ul#menuleft li a
+						{ letter-spacing: 0.1em;
+						  font: normal 100% arial, sans-serif;
+						  display: block; 
+						  float: left; 
+						  height: 34px;
+						  margin: 10px 0 0 0;
+						  padding: 9px 26px 6px 24px;
+						  text-align: center;
+						  color: #FFF;
+						  text-transform: uppercase;
+						  text-decoration: none;
+						  background: transparent;} 
+
+						ul#menuleft li a:hover, ul#menuleft li.selected a, ul#menuleft li.selected a:hover
+						{ color: #FFF;
+							
+
+						  background: transparent url(transparent.png) repeat;}
+  </style>
+</head>
+
+<body>
+  <div id="main">
+   
+    <div id="site_contentleft">
+      
+      <div class="sidebarleft">
+        
+      				<div id="menubarleft">
+				<ul id="menuleft">
+				  <!-- insert your sidebar items here -->
+				  <li><a href="AdminLogin_Home.jsp">Home</a></li>
+				  <li><a href="AdminLogin_CreatePR.jsp">Create PayRoll</a></li>
+				  <li><a href="AdminLogin_UpdatePR.jsp">Update PayRoll</a></li>
+				  <li><a href="AdminLogin_DeletePR.jsp">Delete PayRoll</a></li>
+				  <li class="selected"><a href="AdminLogin_ChangePassword.jsp">Change Password</a></li>
+				  <li><a href="AdminLogin.jsp">Log Out</a></li>
+				  
+				</ul>
+			        
+      </div>	
+      </div>
+      
+
+      
+      <div id="contentleft">
+        <!-- insert the page content here -->
+      	<h1>Change Password  </h1>
+		<div >
+        <form name="myForm" action="#" onsubmit="return myFunction()" method="post">
+        	<p style="color:red" id="checkuser"></p>
+	        <table >
+			  <tr>
+			    <td>New Password</td>
+			    <td><input type="password" name="password1" onfocus="return validpass0()"></td>
+			    
+			  </tr>
+			  <tr>
+			    <td>Re-type Password</td>
+			    <td><input type="password" name="password2" onfocus="return validpass2()"></td>
+			    
+			  </tr>
+			  <tr>
+			    <td><input type="reset" name="first" value="RESET"></td>
+			    <td><input type="submit" name="secound" value="SUBMIT"></td>
+			    
+			  </tr>
+			  
+			</table>
+			
+			<h4 style="padding-top: 5px" align="center"><% out.print(strMessage); %></h4>
+		</form>
+			
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      
+    </div>
+  </div>
+</body>
+</html>

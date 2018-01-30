@@ -1,0 +1,10 @@
+
+
+.caption b a{
+    cursor: pointer;
+    color: #2363B6
+}
+
+.single:hover{
+    background-color: #ddd; 
+}

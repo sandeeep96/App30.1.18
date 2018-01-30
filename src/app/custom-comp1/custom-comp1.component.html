@@ -1,0 +1,17 @@
+<h2>Country Details</h2>
+
+<select [(ngModel)]="countryName" (click)="getCountryInfo()">
+<option value=""> select </option>
+<option *ngFor="let country of countriesList" value="{{country.name}}"> {{country.name}} </option>
+</select>
+
+<div *ngIf="countryName">
+  <h3><u>Name:</u> {{countryObj.name}}</h3>
+  <h3><u>Capitol: </u>{{countryObj.capital}}</h3>
+  <h3><u>Region:</u> {{countryObj.region}}</h3>
+  <h3><u>Sub-Region:</u> {{countryObj.subregion}}</h3>
+  <h3><u>Population:</u> {{countryObj.population}}</h3>
+  <h3><u>Time-Zone:</u> {{countryObj.timezones[0]}}</h3>
+  <h3><u>Flag:</u></h3>
+  <img src="{{countryObj.flag}}" alt="no Image of Flag" width="150" height="100">
+</div>
