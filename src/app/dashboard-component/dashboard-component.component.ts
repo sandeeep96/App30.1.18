@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
+import { AnonymousSubscription } from "rxjs/Subscription";
+import { Observable } from 'rxjs/Rx';
 
 import {WinnerService} from '../winners.service';
 import {Winner} from '../winner';
@@ -13,11 +15,46 @@ export class DashboardComponentComponent implements OnInit {
 
   winners: Winner[] = [];
 
+  private timerSubscription: AnonymousSubscription;
+  private postsSubscription: AnonymousSubscription;
+
   constructor(private winnerService: WinnerService,private router: Router) { }
 
   ngOnInit() {
-    this.winnerService.getWinners()
-    .subscribe(heroes => this.winners = heroes);
+    console.log("ng init");
+    this.refreshData();
+
+  }
+
+  public ngOnDestroy(): void {
+    console.log("ng destroy");
+    if (this.postsSubscription) {
+      this.postsSubscription.unsubscribe();
+    }
+    if (this.timerSubscription) {
+      this.timerSubscription.unsubscribe();
+    }
+  }
+
+  private refreshData(): void {
+    this.postsSubscription = this.winnerService.getWinners().subscribe(
+      (data) => {
+        this.winners = data;
+        this.subscribeToData();
+      },
+      function (error) {
+        console.log(error);
+      },
+      function () {
+        console.log("completed");
+      }
+    );
+  }
+
+  private subscribeToData(): void {
+
+    this.timerSubscription = Observable.timer(5000)
+      .subscribe(() => this.refreshData());
   }
 
   gotoDetail(winner): void {
