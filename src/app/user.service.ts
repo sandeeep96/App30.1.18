@@ -31,7 +31,7 @@ export class UserService {
 
   getUserDetails(term: string) {
     return this.http
-               .get("http://172.24.145.86:3000/users/?name="+term)
+               .get("http://localhost:3000/users/?name="+term)
                .map(response => response.json() as User).toPromise()
                //.then((res)=>console.log(res));
   }

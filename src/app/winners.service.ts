@@ -11,7 +11,7 @@ export class WinnerService {
 
     constructor(private http: Http) { }
 
-    private winnersUrl = 'http://172.24.145.86:3000/winners';  // URL to web api
+    private winnersUrl = 'http://localhost:3000/winners';  // URL to web api
 
     // private headers = new Headers({'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'});
 
@@ -96,8 +96,8 @@ export class WinnerService {
 
     
     delete(id: number): Promise<void> {
-      //const url = `${this.winnersUrl}/${id}`;
-      return this.http.delete(`http://172.24.145.86:3000/winners/` + id).toPromise()
+      const url = `${this.winnersUrl}/${id}`;
+      return this.http.delete(url).toPromise()
         .catch(this.handleError);
     }
    

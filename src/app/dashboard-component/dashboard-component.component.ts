@@ -53,7 +53,7 @@ export class DashboardComponentComponent implements OnInit {
 
   private subscribeToData(): void {
 
-    this.timerSubscription = Observable.timer(5000)
+    this.timerSubscription = Observable.timer(10000)
       .subscribe(() => this.refreshData());
   }
 

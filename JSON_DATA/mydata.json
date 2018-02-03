@@ -2,7 +2,7 @@
   "winners": [
     {
       "id": 1,
-      "name": "Sai nivin",
+      "name": "PV Sindhu",
       "event": "Badminton",
       "medal": "Silver",
       "venue": "Rio di Jeniro",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "name": "Sai sandeep",
+      "name": "sakshi malik",
       "event": "Wrestling",
       "medal": "Bronze",
       "venue": "Rio di Jeniro",
@@ -131,17 +131,6 @@
       "description": "asdfasdfasdfasddf",
       "year": "29174",
       "id": 12
-    },
-    {
-      "name": "Ganapathy",
-      "event": "coding",
-      "medal": "Gold Medal",
-      "venue": "India",
-      "image": "adsfasdfasdfasdf",
-      "image1": "asdsadfasdfsadf",
-      "description": "he is working in aspire",
-      "year": "20120",
-      "id": 13
     }
   ],
   "users": [
