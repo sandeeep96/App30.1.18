@@ -71,7 +71,7 @@ export class CreateComponentComponent implements OnInit {
 
     if (!this.winnerWOid) { return; }
     this.winnerService.create(this.winnerWOid)
-      .then(hero => {
+      .subscribe(hero => {
         console.log(hero.id+" with name "+hero.name+" is added");
         this.goBack();
       });

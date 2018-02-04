@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 import { AnonymousSubscription } from "rxjs/Subscription";
 import { Observable } from 'rxjs/Rx';
+import { HttpErrorResponse } from '@angular/common/http';
 
 import {WinnerService} from '../winners.service';
 import {Winner} from '../winner';
@@ -42,8 +43,12 @@ export class DashboardComponentComponent implements OnInit {
         this.winners = data;
         this.subscribeToData();
       },
-      function (error) {
-        console.log(error);
+      (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+          console.log("Client-side error occured.");
+        } else {
+          console.log("Server-side error occured.");
+        }
       },
       function () {
         console.log("completed");

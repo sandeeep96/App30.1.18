@@ -37,17 +37,17 @@ export class DescriptionComponentComponent implements OnInit {
   deleteDetail(): void {
     this.winnerService
         .delete(this.winner.id)
-        .then((req) => {
+        .subscribe((req) => {
           // this.heroes = this.heroes.filter(h => h !== hero);
           // if (this.selectedHero === hero) { this.selectedHero = null; }
-          console.log(req);
+          // console.log(req);
           this.location.back();
         });
   }
 
   saveDetail(): void {
      this.winnerService.update(this.winner)
-    .then(() => this.goBack());
+    .subscribe(() => this.goBack());
   }
 
   exitEditDetail(){

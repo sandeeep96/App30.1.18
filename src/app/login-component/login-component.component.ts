@@ -40,7 +40,7 @@ export class LoginComponentComponent implements OnInit {
     this.viewUserPassword=forms.Password;
     console.log("view---"+this.viewUserName,this.viewUserPassword);
     this.user.getUserDetails(this.viewUserName)
-    .then(data=>{
+    .subscribe(data=>{
       // console.log(data);
       // console.log(data[0].name);
       // console.log(data[0].password);
@@ -52,12 +52,13 @@ export class LoginComponentComponent implements OnInit {
       // console.log("db"+this.dbUser.password);
       this.validateDetails();
       
-    }).catch(error => {
+    },(error) => {
       // TODO: add real error handling
       //console.log(error);
           this.userMsg=true;
           this.loading = false;
-    }); 
+    })
+    
   }
    validateDetails(){
     if((this.viewUserName == this.dbUserName)&&(this.viewUserPassword == this.dbUserPassword)) {
