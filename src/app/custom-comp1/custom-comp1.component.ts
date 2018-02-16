@@ -21,6 +21,8 @@ export class CustomComp1Component implements OnInit {
   }
 
   public getCountryInfo(){
+    console.log("name is:"+this.countryName);
+    if(this.countryName!=="")
     this.countriesService.getCountryDetail(this.countryName).subscribe(res=> this.countryObj=res.json()[0]);
    // console.log("2"+this.countryObj);
   }

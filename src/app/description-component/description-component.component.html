@@ -1,16 +1,16 @@
 <div class="left_div">
-  <h1>{{winner.name}} Details!</h1>  
+  <h1>{{winner?.name}} Details!</h1>  
 
 
-    <img [src]="winner.image1" width="80%" height="50%">
+    <img src="{{winner?.image1}}" width="80%" height="50%">
     <br>
     <br>
-   <span><b>Name: </b>{{winner.name}}</span><br />
-    <span><b>Event: </b>{{winner.event}}</span><br />
-    <span><b>Medal: </b>{{winner.medal}}</span><br />
-    <span><b>Venue: </b>{{winner.venue}}</span><br />
-    <span><b>Year: </b>{{winner.year}}</span><br />
-    <span><b>About: </b>{{winner.description}}</span><br />
+   <span><b>Name: </b>{{winner?.name}}</span><br />
+    <span><b>Event: </b>{{winner?.event}}</span><br />
+    <span><b>Medal: </b>{{winner?.medal}}</span><br />
+    <span><b>Venue: </b>{{winner?.venue}}</span><br />
+    <span><b>Year: </b>{{winner?.year}}</span><br />
+    <span><b>About: </b>{{winner?.description}}</span><br />
     <br>
     
     <table align="center">

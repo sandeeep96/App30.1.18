@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule,Routes } from "@angular/router";
 import { FormsModule }   from '@angular/forms';
-// import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {CalendarModule} from 'primeng/primeng';
@@ -26,7 +26,7 @@ import { CustomComp1Component } from './custom-comp1/custom-comp1.component';
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { InMemoryDataService }  from './in-memory-data.service';
 import { CreateComponentComponent } from './create-component/create-component.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path:'', 
@@ -66,9 +66,11 @@ const routes: Routes = [
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     CalendarModule,
     ButtonModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
    // InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
